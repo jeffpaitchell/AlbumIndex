@@ -1,0 +1,408 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.album {
+	height:250px;
+	width:250px;
+	margin:0 auto;
+	display:block;
+}
+
+.album-show {
+	height:350px;
+	width:350px;
+	margin:0 auto;
+	display:block;
+}
+
+.album_link {
+	margin:0 auto;
+	display:block;
+}
+
+.album-show-title,
+.album-show-artist,
+.album-show-genre {
+	font-weight:bold;
+}
+
+.album-show-artist {
+	font-size:24px;
+	color:green;
+}
+
+.album-show-title {
+	font-size:28px;
+}
+
+.album-show-genre {
+	font-size:24px;
+	color:blue;
+}
+
+.song-list {
+	font-size:16px;
+	font-weight:500;
+}
+
+#edit_links {
+	font-size:20px;
+	font-weight:500;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.genre_select {
+	select{
+		font-size:16px;
+	}
+}
+
+input[type="file"] {
+	font-size:16px;
+}
+
+body {
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-color: #f5f5f5;
+}
+
+@mixin background-tile {
+	box-sizing:border-box;
+	background-color:#FFF;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px 6px #CCC;
+	padding: 1.5em 1.25em;
+}
+
+@mixin album-tile {
+	box-sizing:border-box;
+	padding: 1.5em 1.25em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:300;
+}
+
+p.alert, p.notice {
+	margin:0;
+}
+
+/* Navbar/navigation styles */
+
+
+
+/* Use SASS to nest all of the navbar elements */
+.navbar-default {
+	background-color:#FFF;
+	padding-bottom:5px;
+	padding-top:5px;
+
+	.navbar-nav > li > a {
+		color:#222;
+		font-size:16px;
+		font-weight:bold;
+		&:hover {
+			color: darken(#F1C40F, 5%);
+			transition: 0.5s;
+		}
+	}
+
+	.navbar-header {
+		.navbar-brand {
+			color:#dab10d;
+			letter-spacing:1.4px;
+			font-size:24px;
+			font-weight:bold;
+		}
+	}
+
+	.dropdown-menu > li > a:hover {
+		background-color: darken(#F1C40F, 5%);
+		color: #FFF;
+	}
+
+	.navbar-nav > .open > a, 
+	.navbar-nav > .open > a:hover,
+	.navbar-nav > .open > a:focus {
+		background-color: darken(#F1C40F, 5%);
+		color: #FFF;
+	}
+
+	/* Have a style for the searchbox */
+	.search_box {
+		width:250px;
+		float:right;
+		margin-top:10px;
+		margin-left:20px;
+	}
+
+	.search_box input[type="text"],
+	.search_box input[type="submit"] {
+		float:left;
+	}
+	.search_box input[type="text"]{
+		height:40px;
+	}
+	.search_box input[type="submit"] {
+		margin-left:10px;
+	}
+
+}
+
+/* End Navbar styles */
+
+/* Begin Button Styles */
+
+.btn-custom {
+	color: darken(#F1C40F, 5%);
+	background-color: #FFF;
+	border: 1px solid darken(#F1C40F, 5%);
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: sans-serif;
+	&:hover {
+		text-decoration:none;
+		background-color: darken(#F1C40F, 5%);
+		color:#FFF;
+		transition: 0.5s;
+	}
+}
+
+.links {
+	.btn-custom {
+		padding:3px 10px;
+		font-weight:300;
+	}
+}
+
+.album-links {
+	.btn-custom {
+		padding:3px 10px;
+		font-weight:300;
+		margin-top: 40px;
+	}
+}
+
+/* End Button Styles */
+
+/* Begin Album Styles */
+
+.album-info {
+	@include album-tile;
+
+	text-align:center;
+
+	.album-title {
+		margin-top:0;
+		font-size:20px;
+		white-space:nowrap;
+	}
+
+	.album-artist {
+		font-size:20px;
+		margin-top:10px;
+		margin-bottom:10px;
+		white-space:nowrap;
+		color:green;
+		font-weight:400;
+		span {
+			font-size: 0.80em;
+		}
+	}
+
+}
+
+.row {
+	margin-bottom:30px;
+}
+
+
+/* End Album Styles */
+
+/* Current Genre Styles */
+
+.current-genre {
+	margin-bottom:40px;
+}
+
+/* End Current Genre Styles */
+
+/* New Album Styles */
+
+.new-album-form {
+	@include background-tile;
+
+	h1 {
+		margin-top:0;
+	}
+
+	#genre_id {
+		margin-bottom: 10px;
+	}
+
+	#album_album_img {
+		margin-bottom:10px;
+	}
+}
+
+#new_album_header {
+	text-align:center;
+}
+
+#new_album {
+	width:75%;
+	margin:0 auto;
+}
+
+/* End New Album Styles */
+
+/* Begin Edit Album Styles */
+
+.edit-album-form {
+	@include background-tile;
+
+	h1 {
+		margin-top:0;
+	}
+
+	#album_genre_id {
+		margin-bottom: 10px;
+	}
+
+	#album_album_img {
+		margin-bottom:10px;
+	}
+
+}
+
+/* End Edit Album Styles */
+
+/* Begin Login Form Styles */
+
+.login-form {
+	@include background-tile;
+
+	h2 {
+		margin-top: 0;
+	}
+}
+
+/* End Login Form Styles */
+
+/* Begin Responsive Styles */
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+	.album {width:200px;height:200px;}
+	.album-info {
+		.album-title {margin-top:0;font-size:20px;white-space:nowrap;}
+		.album-artist { font-size:20px;
+						margin-top:10px;
+						margin-bottom:10px;
+						white-space:nowrap;
+		span {
+			font-size: 0.80em;
+			}
+		}
+	}
+	.navbar-default {
+		.search_box {width:300px;margin-top:10px;margin-left:20px;}
+		.search_box input[type="text"],
+		.search_box input[type="submit"] {
+		float:left;
+		font-size:18px;
+		}
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+	.album_link {width:250px;}
+	.album {margin:0 auto;display:block}
+	.album-info {text-align:center;
+		.album-title {margin-top:0;font-size:20px;white-space:nowrap;}
+		.album-artist { font-size:20px;
+						margin-top:10px;
+						margin-bottom:10px;
+						white-space:nowrap;
+		span {
+			font-size: 0.80em;
+			}
+		}
+	}
+
+	.navbar-default {
+		.search_box {width:300px;margin-top:10px;margin-left:0px;margin-right:-32px;}
+		.search_box input[type="text"],
+		.search_box input[type="submit"] {
+		float:left;
+		font-size:18px;
+		}
+		.navbar-right{
+			clear:both;
+		}
+	}
+}
+
+@media screen and (max-width:767px) {
+
+	#album-show-info {margin:0 auto;float:none;text-align:center;}
+
+	.album_link {width:250px;}
+	.album {margin:0 auto;display:block}
+	.album-info {text-align:center;
+		.album-title {margin-top:0;font-size:20px;white-space:nowrap;}
+		.album-artist { font-size:20px;
+						margin-top:10px;
+						margin-bottom:10px;
+						white-space:nowrap;
+		span {
+			font-size: 0.80em;
+			}
+		}
+	}
+
+	.navbar-default {
+		.search_box {width:300px;margin-top:10px;margin-left:0px;float:left;}
+		.search_box input[type="text"],
+		.search_box input[type="submit"] {
+		float:left;
+		font-size:18px;
+		}
+		.navbar-right {
+			float:none;
+			clear:both;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

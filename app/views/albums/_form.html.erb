@@ -1,0 +1,28 @@
+<%= simple_form_for @album do |f| %>
+
+	<%= select_tag(:genre_id, options_for_select(@genres), :prompt => "Select a genre", :required => true) %>
+	
+	<%= f.file_field :album_img %>
+
+	<%= f.input :title, label:"Album Title" %>
+	<%= f.input :artist, label:"Artist" %>
+	<%= f.input :song1, label:"Song1" %>
+	<%= f.input :song2, label:"Song2" %>
+	<%= f.input :song3, label:"Song3" %>
+	<%= f.input :song4, label:"Song4" %>
+	<%= f.input :song5, label:"Song5" %>
+	<%= f.input :song6, label:"Song6" %>
+	<%= f.input :song7, label:"Song7" %>
+	<%= f.input :song8, label:"Song8" %>
+	<%= f.input :song9, label:"Song9" %>
+	<%= f.input :song10, label:"Song10" %>
+	<%= f.input :song11, label:"Song11" %>
+	<%= f.input :song12, label:"Song12" %>
+	<%= f.input :song13, label:"Song13" %>
+	<%= f.input :song14, label:"Song14" %>
+	<%= f.input :song15, label:"Song15" %>
+	<%= f.input :song16, label:"Song16" %>
+	<%= f.input :song17, label:"Song17" %>
+	<%= f.input :song18, label:"Song18" %>
+	<%= f.button :submit, class: "btn btn-info" %>
+<% end %>

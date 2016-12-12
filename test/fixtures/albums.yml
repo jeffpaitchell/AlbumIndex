@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  artist: MyString
+  song1: MyString
+  song2: MyString
+  song3: MyString
+  song4: MyString
+  song5: MyString
+  song6: MyString
+  song7: MyString
+  song8: MyString
+  song9: MyString
+  song10: MyString
+
+two:
+  title: MyString
+  artist: MyString
+  song1: MyString
+  song2: MyString
+  song3: MyString
+  song4: MyString
+  song5: MyString
+  song6: MyString
+  song7: MyString
+  song8: MyString
+  song9: MyString
+  song10: MyString

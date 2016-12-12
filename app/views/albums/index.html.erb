@@ -1,0 +1,22 @@
+<h1 class="current-genre"><%= params[:genre] %></h1>
+
+<% if @albums.count == 0 %>
+	<h1>There are no albums currently in this genre</h1>
+<% else %>	
+
+<div class="row">
+
+	<% @albums.each do |album| %>
+	<div class="col-xs-12 col-sm-6 col-md-3">	
+		<a href="/albums/<%= album.id %>" class="album_link">
+			<%= image_tag album.album_img.url(:album_index), class: "album" %>	
+		</a>
+		<div class="album-info">
+			<h2 class="album-title"><%=album.title %></h2>
+			<h3 class="album-artist"><%=album.artist %></h3>
+		</div>
+	</div>	
+	<% end %>
+</div>	
+<% end %>	
+
